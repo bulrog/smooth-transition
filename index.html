@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7ef">
+    <meta name="description" content="Un premier pas simple vers un quotidien plus durable.">
+    <title>EcoImpact — Un petit pas, chaque jour</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="#" aria-label="EcoImpact, accueil">
+          <span class="brand-mark" aria-hidden="true">e</span>
+          <span>ecoimpact</span>
+        </a>
+        <span class="privacy-note"><span aria-hidden="true">●</span> Vos données restent ici</span>
+      </header>
+
+      <section id="welcome" class="welcome panel" aria-labelledby="welcome-title">
+        <p class="eyebrow">LE CHANGEMENT À VOTRE RYTHME</p>
+        <h1 id="welcome-title">Un petit pas.<br><span>Un vrai impact.</span></h1>
+        <p class="intro">Trouvez une action qui vous ressemble. Pas de jugement, pas d’inscription : juste un premier pas concret.</p>
+        <div class="welcome-art" aria-hidden="true">
+          <span class="sun"></span>
+          <span class="hill hill-back"></span>
+          <span class="hill hill-front"></span>
+          <span class="art-label">ON COMMENCE<br>QUAND VOUS VOULEZ</span>
+        </div>
+        <button id="start-button" class="button button-primary">Trouver mon premier pas <span aria-hidden="true">→</span></button>
+        <p class="fine-print">5 questions · moins d’une minute</p>
+      </section>
+
+      <section id="onboarding" class="panel onboarding-panel" aria-labelledby="question-title" hidden>
+        <div class="progress-row">
+          <button id="back-button" class="text-button" type="button">← Retour</button>
+          <span id="progress-label" class="progress-label"></span>
+        </div>
+        <div class="progress-track" role="progressbar" aria-label="Progression du questionnaire" aria-valuemin="1" aria-valuemax="5" aria-valuenow="1">
+          <span id="progress-bar"></span>
+        </div>
+        <p id="question-category" class="eyebrow"></p>
+        <h1 id="question-title" tabindex="-1"></h1>
+        <p id="question-help" class="question-help"></p>
+        <form id="question-form">
+          <fieldset id="answers" class="answer-list">
+            <legend class="visually-hidden">Choisissez une réponse</legend>
+          </fieldset>
+          <p id="form-error" class="form-error" role="alert" hidden>Choisissez une réponse pour continuer.</p>
+          <button id="next-button" class="button button-primary full-width" type="submit">Continuer <span aria-hidden="true">→</span></button>
+        </form>
+      </section>
+
+      <section id="result" class="panel result-panel" aria-labelledby="result-title" hidden>
+        <div class="result-topline">
+          <p class="eyebrow">VOTRE PREMIER PAS</p>
+          <button id="restart-button" class="text-button" type="button">Recommencer</button>
+        </div>
+        <div class="result-emoji" aria-hidden="true">✦</div>
+        <h1 id="result-title" tabindex="-1">Un pas à votre image.</h1>
+        <p id="result-intro" class="intro"></p>
+
+        <article class="action-card">
+          <div class="action-heading">
+            <span id="action-category" class="tag"></span>
+            <span class="time-tag">UN PETIT PAS CETTE SEMAINE</span>
+          </div>
+          <h2 id="action-title"></h2>
+          <p id="action-description"></p>
+          <div class="impact-heading">
+            <h3>Le trio impact</h3>
+            <span>À mesurer dans une prochaine étape</span>
+          </div>
+          <div class="impact-grid">
+            <div class="impact-item"><span aria-hidden="true">🌍</span><strong>Climat</strong><small>Facteur à documenter</small></div>
+            <div class="impact-item"><span aria-hidden="true">♡</span><strong>Santé</strong><small>À évaluer selon l’action</small></div>
+            <div class="impact-item"><span aria-hidden="true">€</span><strong>Argent</strong><small>À estimer selon votre situation</small></div>
+          </div>
+          <button id="complete-button" class="button button-secondary full-width" type="button">Je relève le défi <span aria-hidden="true">✓</span></button>
+          <p id="saved-status" class="saved-status" aria-live="polite"></p>
+        </article>
+        <p class="data-note">Les impacts chiffrés ne sont pas encore calculés. Nous préférons attendre des sources vérifiées plutôt que d’afficher des estimations trompeuses.</p>
+        <button id="clear-button" class="text-button clear-button" type="button">Effacer mes réponses et recommencer</button>
+      </section>
+
+      <footer class="site-footer">
+        <span>Fait pour avancer sans culpabilité.</span>
+        <span>0 compte · 0 donnée envoyée</span>
+      </footer>
+    </main>
+  </body>
+</html>
